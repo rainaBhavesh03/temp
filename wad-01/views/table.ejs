@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <% if (student!=null) { %>
+     <table border="1px">
+        <tr>
+            <th>Name</th>
+            <th>Roll no</th>
+            <th>WAD</th>
+            <th>DSBDA</th>
+            <th>CNS</th>
+            <th>CC</th>
+            <th>AI</th>
+        </tr>
+
+        <% student.forEach(element => { %>
+            <tr>
+                <td><%= element.name %></td>
+                <td><%= element.roll_no %></td>
+                <td><%= element.wad_marks %></td>
+                <td><%= element.dsbda_marks %></td>
+                <td><%= element.cns_marks %></td>
+                <td><%= element.cc_marks %></td>
+                <td><%= element.ai_marks %></td> 
+            </tr>
+         
+        <% }) %>
+     </table>
+    <% } %>
+</body>
+</html>
